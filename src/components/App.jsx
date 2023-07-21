@@ -1,3 +1,5 @@
+import Section from '../components/Section/Section '
+
 export const App = () => {
   return (
     <div
@@ -10,7 +12,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <Section good={3} neutral={2} bad={2}/>
     </div>
   );
 };
