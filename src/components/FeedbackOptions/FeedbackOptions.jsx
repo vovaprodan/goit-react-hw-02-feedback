@@ -1,7 +1,9 @@
-export const FeedbackOptions = ({ options, onLeaveFeedback}) => {
-    return <div>
+import css from './FeedbackOptions.module.css'
+
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+    return <div className={css.container}>
         {options.map(option => {
-      return <button key={option} type="button" onClick={onLeaveFeedback}>{option}</button>
+      return <button className={css.button} key={option} type="button" onClick={onLeaveFeedback}>{option}</button>
         })}
 </div>
 }
