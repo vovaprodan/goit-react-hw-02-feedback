@@ -2,13 +2,18 @@ import React, { Component } from "react";
 import { Statistics } from '../Statistics/Statistics';
 import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
 import { Notification } from '../Notification/Notification';
-import css from './Section.module.css'
+import css from './Section.module.css';
+import PropTypes from 'prop-types';
 
 class Section extends Component {
   static defaultProps = {
-    positivePercentage: 0,
-    
+    positivePercentage: 0, 
   };
+    static propTypes = {
+      good: PropTypes.number,
+      neutral: PropTypes.number,
+      bad: PropTypes.number,    
+    };
 
 state = {
   good: 0,
